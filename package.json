@@ -1,6 +1,6 @@
 {
   "name": "@janelia/three-orbit-unlimited-controls",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "three-orbit-controls with unlimited polar angle",
   "main": "dist/OrbitUnlimitedControls.js",
   "scripts": {
