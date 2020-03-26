@@ -10,7 +10,7 @@ north pole" or "under the south pole."
 
 TrackballControls does not have this limitation.  Yet it suffers from "twist" around the viewing
 axis, which gradually accumulates over the course of interaction and makes it difficult to
-return to an original orientation.  It also does not emit a "change" event on each camera
+return to an original orientation.  It also does not emit a `change` event on each camera
 movement, so updating the rendering to reflect the camera movement requires the use of
 [Window.requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame).
 
@@ -46,3 +46,12 @@ replacement for that controller.
 ## New API
 
 `.clicked : Boolean`
+
+The standard `click` event is sent by `this.domElement` for any `mousedown` followed by `mouseup`.  But a more useful definition of a `click` is whent he cursor moves less than a couple of pixels between the `mousedown` and the `mouseup`.  In that case, `this.clicked` will be `true`.
+
+## Installing
+
+```
+npm install
+npm run build
+```
