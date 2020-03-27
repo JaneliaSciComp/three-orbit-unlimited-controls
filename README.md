@@ -49,9 +49,20 @@ replacement for that controller.
 
 The standard `click` event is sent by `this.domElement` for any `mousedown` followed by `mouseup`.  But a more useful definition of a `click` is whent he cursor moves less than a couple of pixels between the `mousedown` and the `mouseup`.  In that case, `this.clicked` will be `true`.
 
-## Installing
+## Installation
 
+The simplest approach is to use the [npm module](https://www.npmjs.com/package/@janelia/three-orbit-unlimited-controls):
+```
+npm install --save @janelia/three-orbit-unlimited-controls
+```
+
+For development, clone the repository and build it:
 ```
 npm install
 npm run build
+npm link
+```
+Then use that build in an application:
+```
+npm link @janelia/three-orbit-unlimited-controls
 ```
