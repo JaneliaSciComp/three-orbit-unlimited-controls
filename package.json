@@ -5,10 +5,10 @@
   "main": "dist/OrbitUnlimitedControls.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production npx babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' && npx webpack --config webpack.prod.config.js",
+    "build": "NODE_ENV=production babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' && webpack --config webpack.prod.config.js",
     "prebuild": "rimraf dist",
-    "dev": "NODE_ENV=development npx babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' --source-maps && npx webpack",
-    "dev-watch": "NODE_ENV=development npx babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' --source-maps --watch --verbose",
+    "dev": "NODE_ENV=development babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' --source-maps && webpack",
+    "dev-watch": "NODE_ENV=development babel ./src --out-dir ./dist --ignore '**/*.test.jsx' --ignore '**/*.test.js' --source-maps --watch --verbose",
     "prepublishOnly": "npm run build"
   },
   "author": "Philip M. Hubbard",
@@ -21,7 +21,7 @@
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/polyfill": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
