@@ -14,7 +14,7 @@
   "author": "Philip M. Hubbard",
   "license": "Janelia Open Source License",
   "dependencies": {
-    "three": "^0.114.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
