@@ -15,7 +15,7 @@
   "license": "Janelia Open Source License",
   "dependencies": {
     "core-js": "^3.6.5",
-    "three": "^0.125.0"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
