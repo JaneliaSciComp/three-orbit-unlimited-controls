@@ -61,6 +61,13 @@ class OrbitUnlimitedControls extends THREE.EventDispatcher {
     // and the 'mouseup'.  In that case, this.clicked will be true.
     this.clicked = false;
 
+    // Specifies modifier keys to make a left-button mouse drag perform camera panning.
+    // On an Apple keyboard, "alt" is "option", "ctrl" is "control", and "meta" is "command".
+    this.usePanModAlt   = true;
+    this.usePanModShift = false;
+    this.usePanModCtrl  = false;
+    this.usePanModMeta  = false;
+
     //
 
     this.state = State.INACTIVE;
@@ -129,8 +136,7 @@ class OrbitUnlimitedControls extends THREE.EventDispatcher {
 
     switch (event.buttons) {
       case 1:
-        if (event.altKey) {
-          // On macOS, altKey indicates the 'option' key.
+        if (this.eventHasPanModifier(event)) {
           this.pan(event.clientX, event.clientY);
         } else {
           this.rotate(event.clientX, event.clientY);
@@ -202,6 +208,13 @@ class OrbitUnlimitedControls extends THREE.EventDispatcher {
     // since that buttton is used for panning.
     event.preventDefault();
   }
+
+  eventHasPanModifier = (event) => (
+    (event.shiftKey && this.usePanModShift) ||
+    (event.altKey && this.usePanModAlt) ||
+    (event.ctrlKey && this.usePanModCtrl) ||
+    (event.metaKey && this.usePanModMeta)
+  )
 
   rotate = (x, y) => {
     const curr = new THREE.Vector2(x, y);

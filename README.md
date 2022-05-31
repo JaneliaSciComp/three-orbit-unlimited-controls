@@ -49,6 +49,17 @@ replacement for that controller.
 
 The standard `click` event is sent by `this.domElement` for any `mousedown` followed by `mouseup`.  But a more useful definition of a `click` is whent he cursor moves less than a couple of pixels between the `mousedown` and the `mouseup`.  In that case, `this.clicked` will be `true`.
 
+`.usePanModAlt : Boolean`
+
+`.usePanModShift : Boolean`
+
+`.usePanModCtrl : Boolean`
+
+`.usePanModMeta : Boolean`
+
+These booleans enable modifier keys to make a left-button mouse drag perform camera panning.  The default is `usePanModAlt` being `true` and the others `false`.  Note that on Apple keyboards, "alt" is "option", "ctrl" is "control", and "meta" is "command".
+
+
 ## Installation
 
 The simplest approach is to use the [npm module](https://www.npmjs.com/package/@janelia/three-orbit-unlimited-controls):
